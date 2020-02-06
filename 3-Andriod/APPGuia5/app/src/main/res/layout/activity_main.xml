@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_200"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TituloApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido a mi aplicación"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+            //Inicio Card 1
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_below="@id/TituloApp"
+                android:background="@color/colorPrimaryDark"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    //Titulo card1
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sección de led's"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="20dp"/>
+
+                    //Switch1
+                    <Switch
+                        android:id="@+id/Led1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Led1"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_grey_600"/>
+
+                    //Switch2
+                    <Switch
+                        android:id="@+id/Led2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Led2"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_grey_600"/>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            //Fin Card 1
+            
+            <LinearLayout
+                android:id="@+id/SecPot"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/Card1"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+                
+                //Inicio Card2
+                
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Card2"
+                    android:layout_width="160dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimaryDark"
+                    app:cardCornerRadius="20dp">
+
+                    //Inicio Gauge 1
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        //Titulo Gauge 1
+                        <TextView
+                            android:id="@+id/TituloGauge1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="Potenciómetro 1"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textAlignment="center"/>
+
+
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gauge1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TituloGauge1"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            app:gaugeEndValue="1023"
+                            app:gaugePointEndColor="@color/md_blue_800"
+                            app:gaugePointStartColor="@color/md_blue_300"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="200"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="@color/md_grey_400"
+                            app:gaugeStrokeWidth="10dp"
+                            app:gaugeSweepAngle="270" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/valueGauge1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="145dp"
+                            android:text="1"
+                            android:textSize="15dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+                    //Fin Gauge 1
+
+                    
+                </androidx.cardview.widget.CardView>
+                
+                //Fin Card2
+
+                //Inicio Card3
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Card3"
+                    android:layout_width="160dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimaryDark"
+                    app:cardCornerRadius="20dp">
+
+                    //Inicio Gauge 2
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        //Titulo Gauge 2
+                        <TextView
+                            android:id="@+id/TituloGauge2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="Potenciómetro 1"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textAlignment="center"/>
+
+
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gauge2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TituloGauge2"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10dp"
+                            app:gaugeEndValue="1023"
+                            app:gaugePointEndColor="@color/md_green_800"
+                            app:gaugePointStartColor="@color/md_green_300"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="200"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="@color/md_grey_400"
+                            app:gaugeStrokeWidth="10dp"
+                            app:gaugeSweepAngle="270" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/valueGauge2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="145dp"
+                            android:text="1"
+                            android:textSize="15dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+                    //Fin Gauge 2
+
+                </androidx.cardview.widget.CardView>
+
+                //Fin Card3
+                
+            </LinearLayout>
+            
+            //Inicio card4
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Card4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SecPot"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    //Titulo card4
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enviar texto a LCD"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:id="@+id/editarTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:hint="Escribe el texto aqui!"/>
+
+                    <Button
+                        android:id="@+id/enviarTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Enviar"/>
+
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            //Fin card4
+
+            //Inicio card5
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Card5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Card4"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    //Titulo card5
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Temperatura en tiempo real"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="20dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/textTemp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="__._°C"
+                            android:textStyle="bold"
+                            android:layout_margin="10dp"
+                            android:textSize="40dp"/>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/thermometer"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            //Fin card5
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

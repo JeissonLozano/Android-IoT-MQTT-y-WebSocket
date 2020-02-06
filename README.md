@@ -8,6 +8,8 @@ En esta cuarta etapa está divida en tres partes:
 
 3- Desarrollaremos una aplicación en Android Studio, donde se explicará un paso a paso del proceso de la cración de la app.
 
+![ESQUEMA DE CONEXIÓN ESP8266](https://github.com/JeissonLozano/Android-IoT-MQTT-y-WebSocket/blob/master/app.png)
+
 # Video paso a paso de la creación de un aplicacón movil android usando MQTT y WebSocket
 En el siguiente video se puede evidenciar como crear una app para IoT
 
